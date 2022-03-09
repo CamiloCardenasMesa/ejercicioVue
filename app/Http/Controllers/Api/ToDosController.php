@@ -43,6 +43,9 @@ class ToDosController extends Controller
      */
     public function show($id)
     {
+        $todo = new ToDo();
+
+        return ToDoResource::make($todo)->response()->setStatusCode(201);
     }
 
     /**
